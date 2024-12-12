@@ -5,8 +5,14 @@ discipline.cowboy()
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+keymap.set("n", "<Leader>w", ":w<CR>", opts)
+keymap.set("n", "<Leader>q", ":q<CR>", opts)
+keymap.set("n", "<F5>", ":source %<CR>", opts)
+keymap.set("v", "<F5>", ":source %<CR>", opts)
+keymap.set("i", "ii", "<Esc>", opts)
+
+
 -- Do things without affecting the registers
--- keymap.set("i", "<silent>", 'ii <Esc>',opts)
 keymap.set("n", "x", '"_x')
 keymap.set("n", "<Leader>p", '"0p')
 keymap.set("n", "<Leader>P", '"0P')
